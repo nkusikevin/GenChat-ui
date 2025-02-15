@@ -257,7 +257,7 @@ export default function Home() {
                     border border-white/20 
                     shadow-lg
                     text-white
-                    transition duration-300 ease-in-out p-4">
+                    transition duration-300 ease-in-out p-4 ">
                 <textarea
                   placeholder="Type here..."
                   className="w-full bg-transparent focus:outline-none text-gray-100 text-lg resize-none"
