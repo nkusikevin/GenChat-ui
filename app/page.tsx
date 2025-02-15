@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { Search, Plus, ChevronDown, Paperclip, Mic, Send, ChevronLeft, Users, MessageSquare, House } from 'lucide-react';
+import { Search, Plus, ChevronDown, Paperclip, Mic, Send, ChevronLeft, House } from 'lucide-react';
 import { DiApple } from "react-icons/di";
 import { BsPersonGear } from "react-icons/bs";
 import { LuMessagesSquare } from "react-icons/lu";
@@ -8,6 +8,25 @@ import { HiSparkles } from "react-icons/hi2";
 import { BiCommentAdd } from "react-icons/bi";
 
 import { useState, useEffect } from 'react';
+
+
+interface Message {
+  text: string;
+  timestamp: Date;
+  sender: string;
+}
+
+interface User {
+  id: number;
+  name: string;
+  image: string;
+  message: string;
+  timestamp: Date;
+  username: string;
+  bio: string;
+  lastSeen: string;
+  messages: Message[];
+}
 
 const formatTime = (date: Date): string => {
   return date.toLocaleTimeString('en-US', {
@@ -147,14 +166,14 @@ const generateUsers = () => {
 };
 
 export default function Home() {
-  const [users, setUsers] = useState<any[]>([]);
-  const [todayMessages, setTodayMessages] = useState<any[]>([]);
-  const [yesterdayMessages, setYesterdayMessages] = useState<any[]>([]);
-  const [selectedUser, setSelectedUser] = useState<any>(null);
+  // const [users, setUsers] = useState<any[]>([]);
+  const [todayMessages, setTodayMessages] = useState<User[]>([]);
+  const [yesterdayMessages, setYesterdayMessages] = useState<User[]>([]);
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   useEffect(() => {
     const generatedUsers = generateUsers();
-    setUsers(generatedUsers);
+    // setUsers(generatedUsers);
     setTodayMessages(generatedUsers.filter(user => isToday(user.timestamp)));
     setYesterdayMessages(generatedUsers.filter(user => isYesterday(user.timestamp)));
     setSelectedUser(generatedUsers[0]);
@@ -356,7 +375,7 @@ export default function Home() {
 
             {/* Chat Messages */}
             <div className="flex-1 overflow-y-auto mt-8 custom-scrollbar">
-              {selectedUser.messages.map((message: any, index: any) => (
+              {selectedUser.messages.map((message: Message, index: number) => (
                 <div key={index} className="flex items-start gap-3 mb-4">
                   <Image src={selectedUser.image} alt={selectedUser.name} width={48} height={48} className="w-12 h-12 rounded-full object-cover" />
                   <div className="flex-1">
