@@ -32,7 +32,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [Next.js](https://nextjs.org) - React framework
 - [Tailwind CSS](https://tailwindcss.com) - Styling
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) - AI integration
 
 ## This is how the app looks like
 
@@ -59,7 +58,6 @@ You can start editing the application by modifying files in the `app` directory.
 To learn more about the technologies used in this project:
 
 - [Next.js Documentation](https://nextjs.org/docs)
-- [Vercel AI SDK Documentation](https://sdk.vercel.ai/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
 ## Deployment
