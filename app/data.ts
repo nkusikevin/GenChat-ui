@@ -14,7 +14,8 @@ const generateUsers = () => {
                 {
                     text: "Just wrapped up an intense streaming session! The new update is incredible. Have you tried the new features yet?",
                     timestamp: new Date(now.getTime() - 30 * 60 * 1000),
-                    sender: 'user'
+                    sender: 'Colleen',
+                    senderId: 1
                 },
 
             ]
@@ -32,7 +33,8 @@ const generateUsers = () => {
                 {
                     text: "I've pushed the latest changes to the repository. The new authentication system is looking solid!",
                     timestamp: new Date(now.getTime() - 3 * 60 * 60 * 1000),
-                    sender: 'user'
+                    sender: 'Max',
+                    senderId: 2
                 },
 
             ]
@@ -50,7 +52,8 @@ const generateUsers = () => {
                 {
                     text: "Just finished the mockups for the landing page. The new color scheme really pops!",
                     timestamp: new Date(now.getTime() - 5 * 60 * 60 * 1000),
-                    sender: 'user'
+                    sender: 'Soham',
+                    senderId: 3
                 },
 
             ]
@@ -68,7 +71,8 @@ const generateUsers = () => {
                 {
                     text: "Great presentation today! The client was really impressed with our progress.",
                     timestamp: new Date(now.getTime() - 7 * 60 * 60 * 1000),
-                    sender: 'user'
+                    sender: 'Kristin',
+                    senderId: 4
                 },
 
             ]
@@ -86,7 +90,8 @@ const generateUsers = () => {
                 {
                     text: "The latest campaign metrics are looking promising. Conversion rates are up by 25%!",
                     timestamp: new Date(now.getTime() - 24 * 60 * 60 * 1000),
-                    sender: 'user'
+                    sender: 'Eduardo',
+                    senderId: 5
                 },
 
             ]
@@ -104,7 +109,8 @@ const generateUsers = () => {
                 {
                     text: "The user testing sessions revealed some interesting patterns in navigation behavior.",
                     timestamp: new Date(now.getTime() - 25 * 60 * 60 * 1000),
-                    sender: 'user'
+                    sender: 'Dianne',
+                    senderId: 6
                 },
 
             ]
